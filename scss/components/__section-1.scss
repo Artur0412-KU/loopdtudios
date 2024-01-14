@@ -1,0 +1,95 @@
+@import "../main/__colors.scss";
+@import "../main/__fonts.scss";
+
+.section-1 {
+    padding:  100px;
+
+    @media (max-width: 815px) {
+        padding: 70px;
+    }
+
+    @media (max-width: 375px) {
+        padding: 20px;
+    }
+
+
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        flex-direction: row;
+        gap: 20px;
+
+        @media (max-width: 815px) {
+            flex-direction: column;
+        }
+
+        &__img {
+            position: relative;
+
+            @media (max-width: 815px) {
+                position: none;
+            }
+            img {
+                width: auto;
+
+                @media (max-width: 815px) {
+                    width: auto;
+                }
+
+                @media (max-width: 375px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__text {
+            position: absolute;
+            display: flex;
+            align-items: start;
+            justify-content: flex-start;
+            flex-direction: column;
+            top: 730px;
+            left: 600px;
+            background-color: $white;
+            padding: 70px;
+            width: 40%;
+
+            @media (max-width: 815px) {
+                width: 100%;
+                position: relative; 
+                top: 0;
+                left: 0;
+            }
+
+            @media (max-width: 375px) {
+                padding: 20px;
+                text-align: center;
+                align-items: center;
+            }
+
+            &-title {
+                font-size: 32px;
+                font-family: 'Josefin Sans', sans-serif;
+                text-transform: uppercase;
+                max-width: 70%;
+
+                @media (max-width: 375px) {
+                    text-align: center;
+                    font-size: 26px;
+                    width: 100%;
+                }
+            }
+
+            &-par {
+                font-family: 'Alata', sans-serif;
+                color: $dark-gray;
+                max-width: 70%;
+
+                @media (max-width: 375px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

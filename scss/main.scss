@@ -1,0 +1,13 @@
+@import './components/__header.scss';
+@import './components/__section-1';
+@import "./components/__section-2";
+@import './components/__footer';
+@import "./components/_attribution";
+
+@import "./__base";
+
+body {
+    margin: 0;
+    padding: 0;
+    width: auto;
+}

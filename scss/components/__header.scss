@@ -1,0 +1,177 @@
+@import "../main/__colors.scss";
+@import "../main/__fonts.scss";
+
+.header {
+    background-image: url("../images/desktop/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Alata', sans-serif;
+    position: relative;
+
+    @media (max-width: 375px) {
+        background-position: top;
+    }
+
+    &-container {
+        display: flex;
+        padding:  50px 70px;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 70px;
+
+
+
+        @media (max-width: 815px) {
+           padding: 40px 70px;     
+        }
+
+        @media (max-width: 375px) {
+            padding: 40px 20px;     
+        }
+        
+        &__top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+
+            @media (max-width: 815px) {
+                justify-content: center;
+                gap: 80px;
+            }
+
+            @media (max-width: 375px) {
+                gap: 40px;
+            }
+
+
+            &-nav {
+                ul {
+                   display: flex;
+                   align-items: center;
+                   justify-content: space-between;
+                   flex-direction: row; 
+                   gap: 30px;
+
+                   @media (max-width: 815px) {
+                      gap: 10px;
+                    }
+    
+
+                   li {
+                      list-style: none;
+                      a {
+                        color: #fff;
+                        text-decoration: none;
+                        font-size: 15px;
+
+                        &:hover {
+                          color: $dark-gray;
+                          transition: .3s ease-in-out;
+                        }
+                      }
+
+                      
+                    }
+
+                   @media (max-width: 375px) {
+                     display: none;
+                   }
+                }
+
+                &-mobile {
+                    display: none;
+
+                    @media (max-width: 375px) {
+                        &__active {
+
+                    &__close {
+                        display: none;
+                    }
+
+                    @media (max-width: 375px) {
+                        display: none;
+                        background-color: #000;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        padding: 40px 20px;
+                        width: auto;
+                        height: auto;
+                        gap: 40px;
+
+                        ul {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            flex-direction: column;
+                            gap: 20px;
+                            padding: 0;
+                    
+                    
+                            li {
+                                a{
+                                    color: $white;
+                                    list-style: none;
+                                    text-decoration: none;
+                                }
+                        
+                            }
+                        }
+
+                        &__close { 
+                            @media (max-width: 375px) {
+                                display: flex;
+                               align-items: center;
+                               justify-content: center;
+                            }
+                    
+                        }
+                
+                        }
+                }
+                    }
+                }
+
+                
+                &-mobile-menu {
+                    display: none;
+
+                    @media(max-width: 375px) {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+
+        &__botom {
+            margin: 0;
+            padding: 0;
+            border: 1px $white solid;
+            width: 50%;
+            padding: 20px;
+            margin-bottom: 70px;
+
+            @media (max-width: 375px) {
+                width: auto;
+            }
+            &-title {
+                font-family: 'Josefin Sans', sans-serif;
+                color: $white;
+                text-transform: uppercase;
+                font-size: 32px;
+                letter-spacing: 2px;
+            }
+
+        }
+
+
+    }
+}
